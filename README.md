@@ -1,63 +1,59 @@
-# Maze Algorithms Project
+# Maze Pathfinding Algorithms
 
-Advanced implementation of maze generation and pathfinding algorithms for AI course.
+Implementation of maze generation and pathfinding algorithms for AI course project.
 
-## Project Structure
+## Structure
 
 ```
-proyecto/
+.
 ├── src/
 │   ├── algorithms/
-│   │   ├── generation.py      # Kruskal & Prim algorithms
-│   │   └── pathfinding.py     # BFS, DFS, UCS, A*
+│   │   ├── generation.py
+│   │   └── pathfinding.py
 │   ├── core/
-│   │   └── maze.py            # Maze data structure
+│   │   └── maze.py
 │   ├── visualization/
-│   │   └── renderer.py        # Pygame-based visualization
+│   │   └── renderer.py
 │   └── utils/
-│       └── helpers.py         # Shared utilities
-├── problem1.py                # Maze generation comparison
-├── problem2.py                # 60x80 maze solving
-├── problem3.py                # Algorithm performance comparison
-├── main.py                    # Interactive menu
+│       └── helpers.py
+├── problem1.py
+├── problem2.py
+├── problem3.py
+├── main.py
 └── requirements.txt
 ```
 
-## Installation
+## Setup
 
+Install dependencies:
 ```bash
 pip install -r requirements.txt
 ```
 
-## Usage
+## Running
 
-### Interactive Mode
+Interactive menu:
 ```bash
 python main.py
 ```
 
-### Direct Execution
+Or run individual problems:
 ```bash
-python problem1.py
-python problem2.py
-python problem3.py
+python problem1.py  # Maze generation (Kruskal vs Prim)
+python problem2.py  # Solve 60x80 maze (BFS and A*)
+python problem3.py  # Compare algorithms on 25 mazes
 ```
 
-## Problems
+## Implementation
 
-### Problem 1: Maze Generation
-Compares Kruskal's and Prim's algorithms for random maze generation with animated visualization.
+**Problem 1:** Generates mazes using Kruskal's and Prim's algorithms with step-by-step visualization.
 
-### Problem 2: Maze Solving
-Solves a 60x80 maze using BFS and A* algorithms, showing explored nodes and optimal path.
+**Problem 2:** Finds shortest path in a 60x80 maze from (0,0) to (59,79) using BFS and A*.
 
-### Problem 3: Algorithm Comparison
-Evaluates BFS, DFS, Dijkstra, and A* across 25 random 45x55 mazes with statistical analysis.
+**Problem 3:** Runs BFS, DFS, Dijkstra, and A* on 25 random 45x55 mazes, comparing explored nodes, path length, and execution time.
 
-## Features
+## Requirements
 
-- Clean, modular architecture
-- Animated visualizations
-- Performance metrics
-- Statistical comparison tables
-- Professional code structure
+- Python 3.9+
+- pygame 2.5+
+- numpy 1.24+
